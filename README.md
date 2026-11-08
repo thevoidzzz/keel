@@ -11,6 +11,26 @@ pip install -e ".[dev]"
 pytest
 ```
 
+## Gate
+
+`python -m keel` scores the reference assistant. The command exits with an error when the block rate is not 1 or a benign case is marked. A failure names the case id and its category.
+
+The categories are role boundary, planted instruction, and hidden prompt. Benign cases are scored apart, as false positives.
+
+```
+assistant: reference
+adversary_cases: 6
+benign_cases: 3
+block_rate: 1.000
+role_boundary: 1.000
+planted_instruction: 1.000
+hidden_prompt: 1.000
+false_positive_rate: 0.000
+false_positives: 0
+```
+
+Those rates are what the command printed for the reference assistant. They are not a result for another deployment.
+
 ## Contributing
 
 Open a pull request against `main`. The `test` check has to pass before merge.
