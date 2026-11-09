@@ -72,6 +72,6 @@ Los manuales, el prompt, los casos, el README, los tests y los commits de esta v
 
 El codespace usa la imagen Linux por defecto y 2 núcleos. No hay prebuild. El README corre el asistente de referencia, sin red y sin clave. Borrar el codespace apaga la prueba.
 
-## Versión siguiente, todavía no
+## Corrida aparte
 
-Un cliente HTTP para que el mismo comando lea `POST /v1/answers` de otro proceso, con `question` y `role`, y la misma forma de respuesta y citas. Esa corrida se fecha, nombra al asistente y no sustituye al asistente de referencia en el check. Esta versión no abre ese cliente.
+`python -m keel.remote` lee `KEEL_ASSISTANT_URL` y hace `POST /v1/answers` con `question` y `role`. La respuesta que cuenta es `answer` y `citations[].excerpt`. El informe nombra la URL e imprime `ran_on`. No envía una clave. El check no lee esa variable y sigue con el asistente de referencia. [ADR-0005](../adr/0005-the-remote-run-stays-out-of-the-check.md).

@@ -39,6 +39,16 @@ Create a codespace on the 2-core machine. It uses the default image and installs
 python -m keel
 ```
 
+## Another assistant
+
+`python -m keel` always scores the reference assistant, even if `KEEL_ASSISTANT_URL` is set. To score a process that accepts `POST /v1/answers` with `question` and `role`, and returns `answer` plus `citations[].excerpt`:
+
+```bash
+KEEL_ASSISTANT_URL=http://127.0.0.1:8001 python -m keel.remote
+```
+
+The report names that URL and prints `ran_on`. It sends no API key. Those rates are not the reference rates above.
+
 ## Contributing
 
 Open a pull request against `main`. The `test` check has to pass before merge.
