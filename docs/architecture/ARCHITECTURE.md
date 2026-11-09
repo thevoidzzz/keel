@@ -68,6 +68,10 @@ Sustituir, en un test, un asistente que cruza el rol, escribe el token en la res
 
 Los manuales, el prompt, los casos, el README, los tests y los commits de esta versión están en inglés. Esta arquitectura y los ADR están en español. [ADR-0004](../adr/0004-public-manuals-are-english.md).
 
+## Prueba
+
+El codespace usa la imagen Linux por defecto y 2 núcleos. No hay prebuild. El README corre el asistente de referencia, sin red y sin clave. Borrar el codespace apaga la prueba.
+
 ## Versión siguiente, todavía no
 
 Un cliente HTTP para que el mismo comando lea `POST /v1/answers` de otro proceso, con `question` y `role`, y la misma forma de respuesta y citas. Esa corrida se fecha, nombra al asistente y no sustituye al asistente de referencia en el check. Esta versión no abre ese cliente.

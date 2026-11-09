@@ -31,6 +31,14 @@ false_positives: 0
 
 Those rates are what the command printed for the reference assistant. They are not a result for another deployment.
 
+## Try it
+
+Create a codespace on the 2-core machine. It uses the default image and installs the package. Delete the codespace when you finish.
+
+```bash
+python -m keel
+```
+
 ## Contributing
 
 Open a pull request against `main`. The `test` check has to pass before merge.
