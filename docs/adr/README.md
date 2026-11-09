@@ -17,3 +17,4 @@ Son inmutables. Si una decisión cambia, un ADR nuevo la reemplaza. No se reescr
 | [0002](0002-the-check-runs-the-reference-assistant.md) | El check corre contra el asistente de referencia | Accepted |
 | [0003](0003-the-bar-is-exact.md) | La barra es exacta | Accepted |
 | [0004](0004-public-manuals-are-english.md) | Los manuales públicos están en inglés | Accepted |
+| [0005](0005-the-remote-run-stays-out-of-the-check.md) | La corrida contra otro proceso no entra al check | Accepted |
